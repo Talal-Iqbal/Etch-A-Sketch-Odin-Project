@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            width: 50vw;
+            height: 50vh;
+            background-color: white;
+            margin: 0 auto;
+        }
+        #container-rows{
+            display: flex;
+            position: absolute;
+            width: 50vw;
+            height: 50vh;
+
+        }
+        #container-columns{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            height: 50vh;
+            width: 50vw;
+        }
+        .divrows{
+            flex: auto;
+            /* display: flex; */
+        }
+        .divcolumns{
+            /* display: flex;
+            flex-direction: column; */
+            flex: auto;
+        }
+    </style>
+    <script src="./etch-a-sketch.js"></script>
+</head>
+<body>
+    <h1 id="gridsize">16 X 16</h1>
+    <div id="container">
+        <div id="container-rows"></div>
+        <div id="container-columns"></div>
+    </div>
+</body>
+</html>
