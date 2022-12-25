@@ -5,7 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./etch-a-sketch.js"></script>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #FAF9F6;
+        }
+        body h1{
+            font-weight: 700;
+        }
         #container{
             display: flex;
             width: 50vw;
@@ -28,22 +39,46 @@
             width: 50vw;
         }
         .divrows{
-            flex: auto;
-            /* display: flex; */
-        }
-        .divcolumns{
-            /* display: flex;
-            flex-direction: column; */
+            display: flex;
+            flex-direction: column;
             flex: auto;
         }
+        #gridSize:hover{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        #inputColor{
+            padding: 0;
+            border: none;
+            height: 40px;
+            width: 40px;
+        }
+        .text{
+            color:#990011FF;
+        }
+        .pickColor{
+            display: flex;
+            align-items: center;
+        }
+        .pickColor h2{
+            font-weight: 300;
+        }
+
     </style>
-    <script src="./etch-a-sketch.js"></script>
 </head>
 <body>
-    <h1 id="gridsize">16 X 16</h1>
+
+
+    <center><h1 class="text">Etch A Sketch</h1></center>
+    <!-- <h1 id="gridsize">16 X 16</h1> -->
+    <div class="pickColor">
+        <h2 class="text">Pick Color: </h2>
+        <input type="color"  id="inputColor" value="#000000" style="margin: 0; padding: 0;">
+    </div>
     <div id="container">
-        <div id="container-rows"></div>
-        <div id="container-columns"></div>
+        <div id="container-rows">
+        </div>
     </div>
 </body>
 </html>
